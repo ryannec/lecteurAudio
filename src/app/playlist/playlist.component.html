@@ -1,0 +1,4 @@
+<h1>Playlist</h1>
+<ul *ngFor="let element of playlist;let i = index">
+  <li><button (click)="playMusic(i)">Lecture</button><button (click)="deleteOfPlaylist(i)">Supprimer de la Playlist</button>{{element}}</li>
+</ul>

@@ -1,0 +1,15 @@
+<h2>Ajoute ton titre à la playlist</h2>
+<select (change)="changeChoose()" name="methode" id="methode">
+  <option selected>ajouter via une URL</option>
+  <option>ajouter via un fichier local</option>
+</select>
+<form [formGroup]="urlForm" (ngSubmit)="onSubmit()" >
+  <div *ngIf="url" >
+    <input type="text" name="lienUrl" placeholder="insérer votre URL ici" formControlName="lienUrl" />
+  </div>
+
+  <div *ngIf="!url">
+    <input type="file" name="lienFile" formControlName="lienFile" (change)="onFileSelected($event)"/>
+  </div>
+  <button type="submit" (click)="onSubmit()">Ajouter à la playlist</button>
+</form>

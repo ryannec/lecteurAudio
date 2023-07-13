@@ -9,6 +9,8 @@ export class FormsComponent {
   url: boolean = true;
   @Input()
   playlist: string[] = [];
+   fileName = File.name;
+
 
   urlForm = this.formBuilder.group({
     lienUrl: [''],
@@ -29,5 +31,7 @@ export class FormsComponent {
     const fileName = file.name;
     const url = URL.createObjectURL(file);
 this.playlist.push(url);
+console.log(file);
+
   }
 }

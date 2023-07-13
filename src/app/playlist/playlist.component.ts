@@ -14,7 +14,6 @@ playMusic(index: number){
   audio.play();
 }
 deleteOfPlaylist(index:number){
-  // const index = this.playlist.indexOf(element)
 this.playlist.splice(index ,1)
 }
 }

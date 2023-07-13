@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Track } from './models';
 
 @Component({
   selector: 'app-root',
